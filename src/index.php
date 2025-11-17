@@ -30,7 +30,9 @@
         <label for="loginpg" class="tag">Já é cliente?</label>
         <a href="login.php" id="loginpg" class="btn">Login</a>
     </div>
+   
 </div>
+<a href="cardapio.php">Veja nosso cardapio</a>
 </div>
         </div>
     </section>

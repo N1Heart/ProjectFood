@@ -2,6 +2,7 @@
 // src/estoque.php
 
 include(__DIR__ . '/includes/header.php');
+
 include(__DIR__ . '/includes/db_connect.php'); 
 
 echo "<title>Controle de Estoque</title>";

@@ -74,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
 
 echo "<title>Editar Cliente</title>";
 ?>
-<link rel="stylesheet" href="./styles.css">
 <main>
     <div class="form-container" style="max-width: 600px;">
         <h1>Editar Cliente</h1>

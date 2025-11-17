@@ -2,6 +2,7 @@
 // src/fornecedores.php
 
 include(__DIR__ . '/includes/header.php');
+
 include(__DIR__ . '/includes/db_connect.php'); 
 
 echo "<title>Gerenciar Fornecedores</title>";
@@ -27,7 +28,6 @@ try {
     $fornecedores = [];
 }
 ?>
-<link rel="stylesheet" href="styles.css">
 <main>
     <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <h1>Gerenciar Fornecedores</h1>

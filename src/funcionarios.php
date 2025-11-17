@@ -3,6 +3,7 @@
 
 // 1. Protege a página e inclui o cabeçalho
 include(__DIR__ . '/includes/header.php');
+
 include(__DIR__ . '/includes/db_connect.php'); // Precisamos do $pdo
 
 echo "<title>Gerenciar Funcionários</title>";
@@ -26,7 +27,6 @@ try {
     $funcionarios = [];
 }
 ?>
-<link rel="stylesheet" href="./styles.css">
 <main >
     <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <h1>Gerenciar Funcionários</h1>

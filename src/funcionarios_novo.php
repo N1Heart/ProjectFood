@@ -59,7 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo "<title>Novo Funcionário</title>";
 ?>
-<link rel="stylesheet" href="./styles.css">
 <main>
     <div class="form-container" >
         <h1>Cadastrar Novo Funcionário</h1>

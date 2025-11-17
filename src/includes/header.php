@@ -53,6 +53,8 @@ if (!isset($_SESSION['funcionario_id'])) {
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="clientes.php">Clientes</a></li>
             <li><a href="fornecedores.php">Fornecedores</a></li>
+            <li><a href="cardapio_admin.php">Cardápio</a></li>
+            <li><a href="pedidos.php">Pedidos</a></li>
             <li><a href="estoque.php">Estoque</a></li>
             <li><a href="funcionarios.php">Funcionários</a></li>
         </div>
