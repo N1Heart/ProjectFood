@@ -142,3 +142,6 @@ echo "<title>Editar Funcionário</title>";
     </div>
 </main>
 
+<?php
+include(__DIR__ . '/includes/footer.php');
+?>
