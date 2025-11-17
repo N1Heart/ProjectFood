@@ -73,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 include(__DIR__ . '/includes/header.php');
 echo "<title>Dar Baixa no Estoque</title>";
 ?>
-<link rel="stylesheet" href="styles.css">
 <main>
     <div class="form-container" style="max-width: 600px;">
         <h1>Dar Baixa no Estoque</h1>

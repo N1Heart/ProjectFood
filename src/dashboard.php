@@ -7,7 +7,6 @@ include(__DIR__ . '/includes/header.php');
 // Define o título da página (opcional, mas bom)
 echo "<title>Dashboard</title>";
 ?>
-<link rel="stylesheet" href="styles.css">
 <main>
     <h1>Dashboard</h1>
     <h2>Bem-vindo, <?php echo htmlspecialchars($funcionario_logado_nome); ?>!</h2>

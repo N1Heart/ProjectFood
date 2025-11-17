@@ -99,7 +99,6 @@ if ($_SERVER["REQUEST_METHOD"] != "POST" || !empty($errors)) {
 include(__DIR__ . '/includes/header.php');
 echo "<title>Editar Funcionário</title>";
 ?>
-<link rel="stylesheet" href="./styles.css">
 <main>
     <div class="form-container" style="max-width: 600px;">
         <h1>Editar Funcionário</h1>

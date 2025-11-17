@@ -56,7 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 include(__DIR__ . '/includes/header.php');
 echo "<title>Novo Cliente</title>";
 ?>
-<link rel="stylesheet" href="./styles.css">
 <main>
     <div class="form-container" style="max-width: 600px;">
         <h1>Novo Cliente</h1>

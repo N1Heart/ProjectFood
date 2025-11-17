@@ -3,6 +3,7 @@
 
 // 1. Protege a página e inclui o cabeçalho
 include(__DIR__ . '/includes/header.php');
+
 include(__DIR__ . '/includes/db_connect.php'); // Precisamos do $pdo
 
 echo "<title>Gerenciar Clientes</title>";
@@ -26,7 +27,6 @@ try {
     $clientes = []; // Garante que $clientes é um array
 }
 ?>
-<link rel="stylesheet" href="./styles.css">
 <main>
     <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
         <h1>Gerenciar Clientes</h1>

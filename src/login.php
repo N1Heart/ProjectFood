@@ -73,13 +73,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         /* Estilo básico para a página de login - coloque no seu styles.css */
-        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #333; }
         .login-container { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
         .login-container h1 { text-align: center; margin-bottom: 1.5rem; }
         .login-container form div { margin-bottom: 1rem; }
         .login-container label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
         .login-container input { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-        .login-container button { width: 100%; padding: 0.75rem; background-color: #5cb85c; color: white; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .login-container button { width: 100%; padding: 0.75rem; background-color: #b85c5cff; color: white; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; }
         .login-container .error { color: #dc3545; background: #f8d7da; border: 1px solid #f5c6cb; padding: 0.75rem; border-radius: 5px; margin-bottom: 1rem; text-align: center; }
     </style>
 </head>
