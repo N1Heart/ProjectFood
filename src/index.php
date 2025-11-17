@@ -32,7 +32,8 @@
     </div>
    
 </div>
-<a href="cardapio.php">Veja nosso cardapio</a>
+<br>
+<a href="cardapio.php" class="btn">Veja nosso cardapio</a>
 </div>
         </div>
     </section>
