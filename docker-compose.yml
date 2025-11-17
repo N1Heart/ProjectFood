@@ -1,39 +1,64 @@
 version: '3.8'
 
 services:
-  # Serviço PHP (com Apache)
+  # 1. Seu Site (PHP/Apache)
   web:
-    image: php:8.1-apache
+    build: ./docker/php  
     container_name: meu_servidor_php
     volumes:
       - ./src:/var/www/html/
     ports:
-      - "8080:80"
-    
-    # --- ADIÇÃO IMPORTANTE AQUI ---
-    # Passa as variáveis de conexão para o PHP (via getenv())
+      - "8080:80" # <-- SEU SITE. Acesse em http://localhost:8080
     environment:
-      DB_HOST: 'db' # O nome do serviço do banco
+      DB_HOST: 'db'
       DB_NAME: 'meu_projeto_db'
       DB_USER: 'usuario_projeto'
       DB_PASS: 'senha_projeto'
-    # --------------------------------
-    
     depends_on:
       - db
+    networks: # <-- Adicionado para conectar com os outros
+      - aula_network
 
-  # Serviço do Banco de Dados (MySQL)
+  # 2. Seu Banco de Dados (MySQL)
   db:
     image: mysql:8.0
     container_name: meu_banco_mysql
     restart: always
     environment:
-      # Estas variáveis são para o MySQL criar o banco
-      MYSQL_ROOT_PASSWORD: 'senha_super_secreta_root'
+      MYSQL_ROOT_PASSWORD: 'senha_super_secreta_root' # Senha do root
       MYSQL_DATABASE: 'meu_projeto_db'
       MYSQL_USER: 'usuario_projeto'
       MYSQL_PASSWORD: 'senha_projeto'
     volumes:
-      - ./docker_data/mysql:/var/lib/mysql
+      - mysql_data:/var/lib/mysql # Usando o volume nomeado
     ports:
-      - "3307:3307"
+      - "3307:3306" # Sua porta 3307 para acesso externo (DBeaver, etc)
+    networks: # <-- Adicionado para conectar com os outros
+      - aula_network
+
+  # 3. Sua Ferramenta de Observação (phpMyAdmin)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: 'db' # <-- CORRIGIDO: Nome do nosso serviço de DB
+      PMA_PORT: 3306
+      PMA_USER: 'root' # Usuário para logar no phpMyAdmin
+      PMA_PASSWORD: 'senha_super_secreta_root' # <-- CORRIGIDO: Senha do root
+    ports:
+      - '8081:80' # <-- MUDADO: Acesse em http://localhost:8081
+    depends_on:
+      - db
+    networks: # <-- Adicionado para conectar com os outros
+      - aula_network
+
+# Definição dos volumes nomeados (do seu exemplo)
+volumes:
+  mysql_data:
+    driver: local
+
+# Definição da rede customizada (do seu exemplo)
+networks:
+  aula_network:
+    driver: bridge
