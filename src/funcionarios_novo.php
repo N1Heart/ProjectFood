@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo "<title>Novo Funcionário</title>";
 ?>
-
+<link rel="stylesheet" href="./styles.css">
 <main>
     <div class="form-container" >
         <h1>Cadastrar Novo Funcionário</h1>
@@ -80,15 +80,15 @@ echo "<title>Novo Funcionário</title>";
         
         <form action="funcionarios_novo.php" method="POST">
             <div class="form-group">
-                <label for="nome">Nome</label>
+                <label for="nome">Nome</label><br>
                 <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($nome) ?>" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email</label><br>
                 <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email) ?>" required>
             </div>
             <div class="form-group">
-                <label for="senha">Senha (min. 6 caracteres):</label>
+                <label for="senha">Senha (min. 6 caracteres):</label><br>
                 <input type="password" id="senha" name="senha" required>
             </div>
             <div class="form-group">
@@ -105,6 +105,3 @@ echo "<title>Novo Funcionário</title>";
     </div>
 </main>
 
-<?php
-include(__DIR__ . '/includes/footer.php');
-?>
