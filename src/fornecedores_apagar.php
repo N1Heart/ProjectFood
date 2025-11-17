@@ -33,5 +33,4 @@ try {
     exit;
 }
 
-// Nenhum HTML aqui.
 ?>
