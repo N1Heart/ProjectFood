@@ -23,6 +23,7 @@ if (!isset($_SESSION['funcionario_id'])) {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-radius: 10px;
         }
         nav.main-nav .nav-links {
             list-style: none;
@@ -53,6 +54,7 @@ if (!isset($_SESSION['funcionario_id'])) {
             <li><a href="clientes.php">Clientes</a></li>
             <li><a href="fornecedores.php">Fornecedores</a></li>
             <li><a href="estoque.php">Estoque</a></li>
+            <li><a href="funcionarios.php">Funcionários</a></li>
         </div>
         
         <div class="user-info">
