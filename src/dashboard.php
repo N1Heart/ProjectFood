@@ -7,25 +7,18 @@ include(__DIR__ . '/includes/header.php');
 // Define o título da página (opcional, mas bom)
 echo "<title>Dashboard</title>";
 ?>
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="styles.css">
 <main>
     <h1>Dashboard</h1>
     <h2>Bem-vindo, <?php echo htmlspecialchars($funcionario_logado_nome); ?>!</h2>
     
     <p>Você está logado no sistema.</p>
-    
+    <br>
     <p>Use o menu de navegação acima para gerenciar o sistema.</p>
-    
+    <br>
     <a href="funcionarios_novo.php" class="btn" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">
         Cadastrar Novo Funcionário
     </a>
-</main>
-
-<?php
-// 3. O Rodapé
-include(__DIR__ . '/includes/footer.php');
-?>
-</a>
 </main>
 
 <?php
